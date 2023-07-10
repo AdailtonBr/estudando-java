@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>condicionais em javascript</title>
+    
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        div {
+            margin-top:10px;
+            background-color: lightgray;
+            width:500px;
+        }
+        div > p{
+            margin: 0;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Teste de velocidade</h1>
+    <input type="number" name="veloc" id="iveloc">
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div class="veredito">
+        Resultado: 
+    </div>
+
+    <script>
+        var caixa = window.document.getElementById('iveloc')
+        
+        var res = document.querySelector('div.veredito')
+        function calcular(){
+            var vel = caixa.value
+            if (vel>50) {
+                res.innerHTML = "Resultado: Vc foi multado!"
+                res.innerHTML += `<p>Sua velocidade é de <strong>${vel} km/h </strong></p>`
+            }
+            else{
+                res.innerHTML = "Resultado: BRAVO ZULU!!!" 
+            }
+        }
+    </script>
+
+</body>
+</html>

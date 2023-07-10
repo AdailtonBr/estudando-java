@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 40pt;
+           
+            
+        }
+        body {
+            height: 100vh;
+            width: 100vw;
+            margin:0;
+            background-image: url(pato.png);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 10%cover;
+            background-attachment: fixed;
+            background-color: black;
+            : 0px;
+            overflow: hidden;
+           
+          
+        }
+
+        div.topo {
+            margin: auto;
+            font-size: 3.9vw;
+            text-align: center;
+            color: white;
+            padding: 20px;
+            position: middle;
+            
+           
+        }
+
+        div.caixa {
+            position: relative;
+            color: white;
+            height: 3.9vw;
+            width: 100vw;
+            margin: auto;
+            font-size: 3.9vw;
+            text-align: center;
+            vertical-align: middle;
+            top:70vh;
+            overflow: hidden;
+            
+        
+        }
+    
+
+    </style>
+</head>
+
+<body>
+    <div class="topo"></div>
+    <div class="caixa">
+    <script>
+        var futuro = new Date('2026-12-09T11:00:00.000Z')
+        
+        setInterval(crono,100)
+     
+        function crono(){
+        var agora = new Date()
+        var delta = futuro.getTime() - agora.getTime()
+        
+        var segundos = Number.parseFloat(delta/1000)
+        
+        var minutos = Number.parseInt(segundos/60)
+        
+        var hora = Number.parseInt(minutos/60)
+
+        segundos = Number.parseFloat((segundos/3600 - hora)*3600)
+
+        minutos = Number.parseInt(segundos/60)
+
+        segundos = Number.parseFloat(((segundos/60 - minutos)*60).toFixed(0))
+
+        var dias = Number.parseInt(hora/24)
+        hora = (hora - dias*24)
+
+        segundos = segundos.toFixed(0)
+        var x= segundos.length
+
+        
+        if (x == 1) {
+            segundos = 0 + segundos 
+        }
+
+        if (segundos == 60){
+            segundos = 59
+        }
+      
+        document.body.querySelector('div.caixa').innerText = `${dias} dias ${hora} horas ${minutos} minutos e ${segundos} segundos`
+
+        document.body.querySelector('div.topo').innerText = "Faltam:"
+        }
+        
+    </script>
+    </div>
+</body>
+
+</html>

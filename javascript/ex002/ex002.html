@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>segunda questao</title>
+    <style>
+        body{
+            height:100vh;
+            width:100vw;
+        }
+        div#area{
+            color: red;
+            background-color: blueviolet;
+             height: 50vh;
+             width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <h1>titulo do site</h1>
+    <div class="caixa">
+        <h2>aqui tem uma div</h2>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem hic explicabo reiciendis excepturi? Cum deleniti incidunt inventore mollitia! Ipsa, expedita autem fugiat sint fugit veritatis minima assumenda accusantium voluptates omnis.
+        </p>
+    </div>
+    <script>
+        var botao = document.querySelector('div.caixa')
+        botao.addEventListener('click', clicou)
+        botao.addEventListener('mouseenter', entrou)
+        botao.addEventListener('mouseout', saiu)
+
+        function clicou(){
+            botao.style.background = "gray"    
+        }
+        function entrou(){
+            botao.style.color = "red"    
+        }
+        function saiu(){
+            botao.style.color = "pink"    
+        }
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
